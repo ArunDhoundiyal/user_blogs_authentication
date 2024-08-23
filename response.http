@@ -1,0 +1,18 @@
+POST http://localhost:3000/user_registration/
+Content-Type: application/json
+
+{
+    "id": "e9a0b2d5-efc5-4c14-b0d2-61b3a6c4b40c",
+    "firstName":"Arun",
+    "lastName": "Dhoundiyal",
+    "email":"arunprakash23797@gmail.com",
+    "password":"arun@1234"
+}
+
+POST http://localhost:3000/user_login/
+Content-Type: application/json 
+
+{
+    "email":"arunprakash23797@gmail.com", 
+    "password":"arun@1234"
+}
