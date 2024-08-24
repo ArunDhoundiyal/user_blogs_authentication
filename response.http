@@ -2,17 +2,72 @@ POST http://localhost:3000/user_registration/
 Content-Type: application/json
 
 {
-    "id": "e9a0b2d5-efc5-4c14-b0d2-61b3a6c4b40c",
-    "firstName":"Arun",
-    "lastName": "Dhoundiyal",
-    "email":"arunprakash23797@gmail.com",
-    "password":"arun@1234"
+    "firstName":"Veena",
+    "lastName": "Kuamari",
+    "email":"veena@gmail.com",
+    "password":"veena@1234"
 }
+
+###
 
 POST http://localhost:3000/user_login/
 Content-Type: application/json 
 
 {
-    "email":"arunprakash23797@gmail.com", 
-    "password":"arun@1234"
+    "email":"veena@gmail.com", 
+    "password":"veena@1234"
 }
+
+### 
+
+
+POST http://localhost:3000/create_blog/
+Content-Type:application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZlZW5hQGdtYWlsLmNvbSIsImlhdCI6MTcyNDUxNDI4Nn0.0SYPlE66aj9K_Q8ElgDcRSosAM9Uix4GwdSLvGv2NJ4
+
+{
+    "blogId":"e6b9f2d1-1a1c-4d67-90c4-535c33d1c1a7",
+    "title":"My 5th blog",
+    "content":"My 5th blog I created successfully. now I am happy."
+}
+
+###
+
+PUT http://localhost:3000/update_blog/e6b9f2d1-1a1c-4d67-90c4-535c33d1c1a7/
+Content-Type:application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZlZW5hQGdtYWlsLmNvbSIsImlhdCI6MTcyNDUxNDI4Nn0.0SYPlE66aj9K_Q8ElgDcRSosAM9Uix4GwdSLvGv2NJ4
+
+{
+    "title":"My 5th blog Veena", 
+    "content":"My 5th blog I created successfully. My name Veena. I am happy"
+    
+}
+
+### 
+GET http://localhost:3000/blogs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhaHVsQGdtYWlsLmNvbSIsImlhdCI6MTcyNDUxMDE0N30.lmE851KpTZjrLJKP5cLHSWAcIs4ZmBm2cUpYJMPcIhE
+
+### 
+GET http://localhost:3000/blog/e6b9f2d1-1a1c-4d67-90c4-535c33d1c1a7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhaHVsQGdtYWlsLmNvbSIsImlhdCI6MTcyNDUxMDE0N30.lmE851KpTZjrLJKP5cLHSWAcIs4ZmBm2cUpYJMPcIhE
+
+### 
+DELETE http://localhost:3000/delete_blog/e6b9f2d1-1a1c-4d67-90c4-535c33d1c1a7 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhaHVsQGdtYWlsLmNvbSIsImlhdCI6MTcyNDUxMDE0N30.lmE851KpTZjrLJKP5cLHSWAcIs4ZmBm2cUpYJMPcIhE
+
+
+### 
+POST http://localhost:3000/create_comment/e6b9f2d1-1a1c-4d67-90c4-535c33d1c1a7
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhaHVsQGdtYWlsLmNvbSIsImlhdCI6MTcyNDUxMDE0N30.lmE851KpTZjrLJKP5cLHSWAcIs4ZmBm2cUpYJMPcIhE
+
+{
+    "commentId":"x6b9f2d1-1a1c-4d67-90c4-535c33d1c1xx",
+    "userComment":"Hi nice to meet you"
+}
+
+###
+
+GET http://localhost:3000/comments/e6b9f2d1-1a1c-4d67-90c4-535c33d1c1a7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhaHVsQGdtYWlsLmNvbSIsImlhdCI6MTcyNDUxMDE0N30.lmE851KpTZjrLJKP5cLHSWAcIs4ZmBm2cUpYJMPcIhE
+###
